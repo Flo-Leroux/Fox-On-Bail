@@ -1,0 +1,79 @@
+#barre_M {
+	left: -5.5%;
+}
+
+#barre_R {
+	left: 36%;
+}
+
+.barre {
+	background-repeat: repeat-Y;
+	background-size: auto 87%;
+}
+
+
+.fox {
+	margin-top: 10%;
+	background-size: auto 80%;
+}
+
+nav a{
+	font-size: 1.8rem;
+	right: 1.5%;
+}
+
+#prog {
+	bottom: 40%;
+}
+
+#billet {
+	bottom: 25%;
+}
+
+#infos {
+	bottom: 10%;
+}
+
+.titre_fox_on_bail {
+	font-size: 3.5rem;
+	right: 3%;
+}
+
+#titre_fox {
+	top: 11%;
+}
+
+#titre_on {
+	top: 20%;
+}
+
+#titre_bail {
+	top: 29%;
+}
+
+#affiche_menu_mobile {
+	width: 13%;
+	position: fixed;
+	background-image: url('../images/menu_circular_button.svg');
+	background-size: 100% auto;
+	right: 1%;
+	top: 1%;
+}
+
+
+#menu_mobile a {
+	margin-bottom: 0%;
+}
+
+#titre_fox_on_bail_mobile {
+	margin: 0;
+	font-size: 2.4rem;
+}
+
+.prog_billet_infos_menu_mobile {
+	font-size: 2rem;
+}
+
+.boutons_contact_sponsors {
+	font-size: 1.3rem;
+}

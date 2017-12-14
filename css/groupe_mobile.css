@@ -1,0 +1,423 @@
+@font-face {
+    font-family: "Kredit";
+    src: url('../font/kredit.ttf');
+}
+
+html, body {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+
+.position {
+	position: fixed;
+}
+
+#background {
+	background-image:  url('../images/background/fond.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	opacity: 0.19;
+	filter: alpha(opacity=19);
+	width: 100%;
+	height: 100%;
+	top: 0;
+}
+
+#barre_div {
+	width: 100%;
+	height: 100%;
+	top: -85%;
+	display: none;
+}
+
+#barre_L {
+	left: 26.3333333%;
+}
+
+#barre_M {
+	left: 46.55555555%;
+}
+
+#barre_R {
+	right: 25.3333333%;
+}
+
+.barre {
+	background-image:  url('../images/background/barre.png');
+	background-repeat: repeat-y;
+	top: 0;
+	width: 8%;
+	height: 100%;
+	position: absolute;
+}
+
+#fox_R {
+	top: 5%;
+	left: 88%;
+}
+
+#fox_L {
+	top: 5%; 
+	right: 88%;
+	-webkit-transform: scaleX(-1);
+	        -ms-transform: scaleX(-1);
+	    transform: scaleX(-1);
+}
+
+.fox {
+	background-image:  url('../images/background/fox.png');
+	background-repeat: no-repeat;
+	background-size: 28% auto;
+	top: 40%;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+nav a{
+	color: #8c1c01;
+	font-family:  "Agency FB", "Courrier New";
+	font-size: 2.6em;
+	top: 26%;
+	text-decoration: none;
+	display: none;
+}
+
+nav a:hover {
+	text-decoration: underline overline darkgrey;
+}
+
+#prog {
+	left: 22.5%;
+	top: 3%;
+}
+
+#billet {
+	left: 45.5%;
+	top: 3%;
+}
+
+#infos {
+	right: 22%;
+	top: 3%;
+}
+
+.fond_bouton {
+	background-image:  url('../images/bouton/bouton_fond_effet.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	top: -15%;
+	width: 100%;
+	height: 50%;
+	display: none;
+}
+
+#trait_menu {
+	width: 100%;
+	height: 4px;
+	background-color: #8c1c01;
+	top: 15%;
+	display: none;
+}
+
+.titre_fox_on_bail {
+	font-family: Kredit;
+	margin: 0;
+	color: #e97c1b;
+	font-size: 4.5em;
+	text-decoration: none;
+	display: none;
+}
+
+#titre_fox {
+	top: 0;
+	left: 4.8888888%;
+	top: 2%;
+	left: 2%;
+	font-size: 3em;
+}
+
+#titre_on {
+	top: 9%;
+	left: 7.3%;
+	top: 2%;
+	left: 8%;
+	font-size: 3em;
+}
+
+#titre_bail {
+	top: 18%;
+	left: 7.5%;
+	top: 2%;
+	left: 13%;
+	font-size: 3em;
+}
+
+#reseaux_sociaux_div {
+	/*border: 2px solid pink;*/
+	width: 10%;
+	height: 20%;
+	top: 4%;
+	right: 3%;
+	display: none;
+}
+
+.reseaux_sociaux {
+	background-repeat: no-repeat;
+	background-size: 50% auto;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+ }
+ 
+#reseaux_sociaux_div .facebook {
+	background-image: url('../images/reseaux_sociaux/logo_facebook.png');
+	background-size: auto 40%;
+	right: 0%;
+}
+
+#reseaux_sociaux_div .twitter {
+	background-image: url('../images/reseaux_sociaux/logo_twitter.png');
+	background-size: auto 40%;
+	top: 0%;
+	right: -50%;
+}
+
+#langues_div {
+	/*border: 2px solid red;*/
+	width: 7%;
+	height: 15%;
+	top: 6%;
+	right: 13%;
+	display: none;
+}
+
+.langues {
+	background-repeat: no-repeat;
+	background-size: 45% auto;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+#v_fr {
+	background-image: url('../images/langues/v_fr.png');
+	background-size: 45% auto;
+	top: 0;
+	right: 0%;
+}
+
+#v_en {
+	background-image: url('../images/langues/v_en.png');
+	background-size: 45% auto;
+	top: 0%;
+	right: -50%;
+}
+
+#triangles_nets_R {
+	right: -57%;
+}
+
+#triangles_nets_L {
+	left: -57%;
+	-webkit-transform: scaleX(-1);
+	        -ms-transform: scaleX(-1);
+	    transform: scaleX(-1);
+}
+
+.triangles_nets {
+	background-image: url('../images/triangles/triangles_nets.png');
+	background-repeat: no-repeat;
+	background-size: 30% auto;
+	width: 100%;
+	height: 100%;
+	top: 17%;
+	display: none;
+}
+
+#triangles_flou_R {
+	right: -50%;
+	opacity: 1;
+}
+
+#triangles_flou_L {
+	left: -50%;
+	opacity: 1;
+	-webkit-transform: scaleX(-1);
+	        -ms-transform: scaleX(-1);
+	    transform: scaleX(-1);
+}
+
+.triangles_flou {
+	background-image: url('../images/triangles/triangles_flou.png');
+	background-repeat: no-repeat;
+	background-size: 28% auto;
+	width: 100%;
+	height: 100%;
+	top: 35%;
+	display: none;
+}
+
+#boutons_bas_droit {
+	width: 12%;
+	height: auto;
+	text-align: center;
+	right: 1%;
+	bottom: 1%;
+	display: none;
+}
+
+.boutons_contact_sponsors {
+	color: #e97c1b;
+	font-family: "Agency FB", "Times New Roman";
+	text-decoration: none;
+}
+
+#boutons_bas_droit .boutons_contact_sponsors {
+	font-size: 1.3em;
+}
+
+#page {
+	width: 75%;
+	height: auto;
+	background-color: RGBa(0, 0, 0, 0.3);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15%;
+	padding: 5%;
+	padding-bottom: 10%;
+	text-align: center;
+}
+
+#page h2 {
+	font-family: "Kredit";
+	font-size: 3rem;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+
+#page p {
+	color: white;
+	font-family: "Agency FB", "Times New Roman";
+	text-align: justify;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#page div {
+	margin: auto;
+	margin-top: 10%;
+}
+
+#affiche_menu_mobile {
+	width: 12%;
+	position: fixed;
+	background-color: #e97c1b;
+	border-radius: 35%;
+	background-size: 100% auto;
+	text-align: center;
+	right: 0;
+	top: 0;
+}
+
+#affiche_menu_mobile p {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0;
+	margin-top: -40%;
+	margin-left: 20%;
+	color: white;
+	font-family: 'Agency FB';
+	font-size: 4rem;
+}
+
+#menu_mobile .boutons_contact_sponsors {
+	font-size: 1.8em;
+}
+
+.boutons_contact_sponsors:hover {
+	text-decoration: underline overline #e97c1b;
+}
+
+.flex_container {
+	display: flex;
+}
+
+.flex_1 {
+	flex: 1;
+}
+
+#menu_mobile {
+	width: 80%;
+	height: 80%;
+	position: fixed;
+	flex-direction: column;
+	display: none;
+	left: 10%;
+	bottom: 10%;
+	background-color: RGBa(0, 0, 0, 0.8);
+	text-align: center;
+}
+
+#titre_fox_on_bail_mobile {
+	font-family: Kredit;
+	margin: 0;
+	color: #e97c1b;
+	font-size: 3em;
+	text-align: center;
+	text-decoration: none;
+}
+
+#titre_fox_on_bail_mobile:hover {
+	text-decoration: underline overline #e97c1b;
+}
+
+#menu_mobile a {
+	margin-bottom: 1%;
+}
+
+#copyright {
+	text-align: center;
+}
+
+#copyright a {
+	color: #e97c1b;
+	font-family: "Agency FB", "Times New Roman";
+	font-size: 1.2rem;
+	text-decoration: none;
+}
+
+.prog_billet_infos_menu_mobile {
+	color: #8c1c01;
+	font-family: "Agency FB";
+	font-size: 2.6em;
+	text-decoration: none;
+	text-align: center;
+}
+
+.prog_billet_infos_menu_mobile:hover {
+	text-decoration: underline overline lightgray;
+}
+
+.boutons_contact_sponsors {
+	color: #e97c1b;
+	font-family: "Agency FB";
+	font-size: 1.3em;
+	text-decoration: none;
+	text-align: center;
+}
+
+.reseaux_sociaux_mobile {
+	color: white;
+	text-decoration: none;
+}
+
+.langues_mobile {
+	color: lightgray;
+	text-decoration: none;
+}

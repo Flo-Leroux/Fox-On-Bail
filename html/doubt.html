@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
+		
+		<title>Fox On Bail</title>
+		<link rel="stylesheet" media="screen and (min-width: 900px)" href="../css/groupe.css" type="text/css">
+		<link rel="stylesheet" media="screen and (max-width: 899px)" href="../css/groupe_mobile.css" type="text/css">
+		
+		<script type="text/javascript" src="../lib/skrollr.js"></script>
+		<script type="text/javascript" src="../lib/jquery.js"></script>
+		<script type="text/javascript" src="../javascript/javascript.js"></script>
+	</head>
+	<body>
+	<!-- SKROLLR notes :
+	
+		- s'utilise en mettant "data-***='*******' " dans les div de la page sur lesquelles on veut un effet avec le scroll
+		- "data-50='*********' " = l'effet entre "" doit être effectué quand le viewport est remonté à 50 pixels
+		- "data-50p='*********' " = l'effet entre "" doit être effectué quand le viewport est remonté à 50 pourcents
+					En utilisant cette méthode, on peut le rendre entièrement Responsive mais il faut rajouter les médias Queries
+					pour la police par exemple.
+		
+		- l'effet entre "" est une modification du CSS
+		
+		- pour faire une pause il suffit de mettre : "data-****=''"
+		
+		- Aide grâce au Skrollr Cheatsheet : https://ihatetomatoes.net/wp-content/uploads/2014/10/skrollr-cheatsheet-v02.png
+	
+	-->
+	
+	<!-- Le conteur de la page -->
+		<div id="page-content">
+		
+		<!-- L'arrière plan "nuageux" en position fixe -->
+			<div id="background" class="position"></div>
+			
+		<!-- Triangles flou qui appraissent à la billeterie -->
+			<div id="triangles_flou_L" class="triangles_flou position"></div>
+			<div id="triangles_flou_R" class="triangles_flou position"></div>
+		
+		<!-- Triangles nets qui appraissent à la billeterie -->
+			<div id="triangles_nets_L" class="triangles_nets position"></div>
+			<div id="triangles_nets_R" class="triangles_nets position"></div>
+		
+		<!-- Page -->
+			<div id="page">
+				<div>
+					<h2>Doubt</h2>
+					<p>C'est l'histoire d'un duo de deux musiciens qui se sont rencontrés lors d'un festival de musique depuis les 
+					deux garçons ne se quittent plus et enchainent les succès. Doubt surf sur des rythmes de deep house légère et 
+					sent bon les beaux jours. Ils nous font l'honneur de venir participer au festival Fox on Bail cette année !</p>
+						
+					<audio id='lecteur_audio' controls="controls">
+						<source src='../musiques/doubt/doubt_1.mp3' type='audio/mp3'/>
+					</audio>
+				</div>
+			</div>
+			
+		<!-- Trait de séparation avec la barre de menu : couleur bordeaux -->
+			<div id="trait_menu" class="position"></div>
+					
+		<!-- Les 2 côtés de la tête de renard -->
+			<div id="fox_L" class="fox position"></div>
+			<div id="fox_R" class="fox position"></div>
+			
+		<!-- Les 3 barreaux géometriques -->
+			<div id="barre_div" class="position">
+				<div id="barre_L" class="barre"></div>
+				<div id="barre_M" class="barre"></div>
+				<div id="barre_R" class="barre"></div>
+			</div>
+			
+		<!-- L'effet lumineux à l'arrière du menu -->
+			<div class="fond_bouton position"></div>
+			<div class="fond_bouton position"></div>
+					
+		<!-- Boutons des langues -->
+			<div id="langues_div" class="position">
+				<div id="v_fr" class="langues"></div>
+				<a id="v_en" class="langues" href="../en/html/clairon_s_fire.html"></a>
+			</div>
+					
+		<!-- Liens vers les réseaux sociaux -->
+			<div id="reseaux_sociaux_div" class="position">
+				<a class="facebook reseaux_sociaux" target="_blank" href="https://www.facebook.com/foxonbail/?fref=ts"></a>
+				<a class="twitter reseaux_sociaux" target="_blank" href="http://www.twitter.com/"></a>
+			</div>
+			
+		
+		<!-- Titre "Fox On Bail" -->
+			<a id="titre_fox" class="titre_fox_on_bail position" href="../index.html#scroll_helper_1">Fox</a>
+			<a id="titre_on" class="titre_fox_on_bail position" href="../index.html#scroll_helper_1">On</a>
+			<a id="titre_bail" class="titre_fox_on_bail position" href="../index.html#scroll_helper_1">Bail</a>
+					
+		<!-- Menu de navigation -->
+			<nav id="menu">
+				<a id="prog" class="position" href="../index.html#scroll_helper_2">Programmation</a>
+				<a id="billet" class="position" href="../index.html#scroll_helper_3">Billetterie</a>
+				<a id="infos" class="position" href="../index.html#scroll_helper_4">Infos Pratiques</a>
+			</nav>
+			
+		<!-- Bouton Contact -->
+			<div id="boutons_bas_droit" class="position flex_container">
+				<a class="boutons_contact_sponsors flex_1" href="../index.html#scroll_helper_5">Contact</a>
+				<a class="boutons_contact_sponsors flex_1" href="../index.html#scroll_helper_6">Sponsors</a>
+			</div>
+			
+			<div id="menu_mobile"  class="flex_container">
+				<a id="titre_fox_on_bail_mobile" class="after_click larg100p flex_1" href="#scroll_helper_1">Fox On Bail</a>
+				
+				<a class="prog_billet_infos_menu_mobile after_click larg100p flex_1" href="#scroll_helper_2">Programmation</a>
+				<a class="prog_billet_infos_menu_mobile after_click larg100p flex_1" href="#scroll_helper_3">Billetterie</a>
+				<a class="prog_billet_infos_menu_mobile after_click larg100p flex_1" href="#scroll_helper_4">Infos Pratiques</a>
+				
+				<a id="contact_mobile" class="boutons_contact_sponsors after_click larg100p flex_1" href="#scroll_helper_5">Contact</a>
+				<a id="sponsor_mobile" class="boutons_contact_sponsors after_click larg100p flex_1" href="#scroll_helper_6">Sponsors</a>
+				<a id="facebook_mobile" class="reseaux_sociaux_mobile after_click larg100p flex_1" target="_blank" href="https://www.facebook.com/foxonbail/?fref=ts">Facebook</a>
+				<a id="twitter_mobile" class="reseaux_sociaux_mobile after_click larg100p flex_1" target="_blank" href="http://www.twitter.com/">Twitter</a>
+				<a class="langues_mobile after_click larg100p flex_1" href="../en/html/clairon_s_fire.html">English</a>
+			</div>
+			
+			<div id="affiche_menu_mobile"> <p><</p> </div>
+		</div>
+	</body>
+</html>

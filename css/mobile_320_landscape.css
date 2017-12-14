@@ -1,0 +1,102 @@
+#barre_M {
+	left: -5.5%;
+}
+
+#barre_R {
+	left: 20%;
+}
+
+.barre {
+	background-repeat: repeat-Y;
+	background-size: auto 100%;
+}
+
+
+.fox {
+	background-size: auto 100%;
+}
+
+nav a{
+	font-size: 3rem;
+	right: 8%;
+}
+
+#prog {
+	bottom: 43%;
+}
+
+#billet {
+	bottom: 23%;
+}
+
+#infos {
+	bottom: 4%;
+}
+
+.titre_fox_on_bail {
+	font-size: 3rem;
+	
+}
+
+#titre_fox {
+	top: 20%;
+	right: 45%;
+}
+
+#titre_on {
+	top: 20%;
+	right: 33%;
+}
+
+#titre_bail {
+	top: 20%;
+	right: 9%;
+}
+
+#affiche_menu_mobile {
+	width: 13%;
+	position: fixed;
+	background-image: url('../images/menu_circular_button.svg');
+	background-size: 100% auto;
+	right: 1%;
+	top: 1%;
+}
+
+
+#menu_mobile a {
+	margin-bottom: 0%;
+}
+
+#titre_fox_on_bail_mobile {
+	margin: 0;
+	font-size: 2.4rem;
+}
+
+.prog_billet_infos_menu_mobile {
+	font-size: 2rem;
+}
+
+.boutons_contact_sponsors {
+	display: inline-block;
+	font-size: 1.3rem;
+}
+
+#contact_mobile, #facebook_mobile {
+	margin-left: -20%;
+}
+
+#sponsor_mobile {
+	margin-top: -12.5%;
+	margin-left: 20%;
+}
+
+#twitter_mobile {
+	margin-top: -10%;
+	margin-left: 20%;
+}
+
+.sponsors_image_div {
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+}

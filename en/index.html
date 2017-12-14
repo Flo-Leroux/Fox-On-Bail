@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
+		
+		<title>Fox On Bail</title>
+		<link rel="stylesheet" media="screen and (min-width: 900px)" href="../css/main.css" type="text/css">
+		<link rel="stylesheet" media="screen and (max-width: 899px)" href="../css/mobile.css" type="text/css">
+		
+		<link rel="stylesheet" media="screen and (max-width: 360px) and (orientation:portrait)" href="../css/mobile_320_portrait.css" type="text/css">
+		<link rel="stylesheet" media="screen and (max-width: 650px) and (orientation:landscape)" href="../css/mobile_320_landscape.css" type="text/css">
+		
+		<script type="text/javascript" src="../lib/skrollr.js"></script>
+		<script type="text/javascript" src="../lib/jquery.js"></script>
+		<script type="text/javascript" src="../javascript/javascript.js"></script>
+	</head>
+	<body>
+	<!-- SKROLLR notes :
+	
+		- s'utilise en mettant "data-***='*******' " dans les div de la page sur lesquelles on veut un effet avec le scroll
+		- "data-50='*********' " = l'effet entre "" doit être effectué quand le viewport est remonté à 50 pixels
+		- "data-50p='*********' " = l'effet entre "" doit être effectué quand le viewport est remonté à 50 pourcents
+					En utilisant cette méthode, on peut le rendre entièrement Responsive mais il faut rajouter les médias Queries
+					pour la police par exemple.
+		
+		- l'effet entre "" est une modification du CSS
+		
+		- pour faire une pause il suffit de mettre : "data-****=''"
+		
+		- Aide grâce au Skrollr Cheatsheet : https://ihatetomatoes.net/wp-content/uploads/2014/10/skrollr-cheatsheet-v02.png
+	
+	-->
+	
+	<!-- Le conteur de la page -->
+		<div id="page-content">
+		
+		<!-- L'arrière plan "nuageux" en position fixe -->
+			<div id="background" class="position"></div>
+		
+<!-- Mouvement menu + barres + fox en position fixe en fonction du slide 1 -->
+			
+		<!-- Les helpers permettent de scroll au click sur le menu, ils doivent être en position absolue et sont
+			 appelés grâce au script -->	 
+			<div id="helper">
+				<div id="scroll_helper_1" class="scroll_helper"></div>
+				<div id="scroll_helper_2" class="scroll_helper"></div>
+				<div id="scroll_helper_3" class="scroll_helper"></div>
+				<div id="scroll_helper_4" class="scroll_helper"></div>
+				<div id="scroll_helper_5" class="scroll_helper"></div>
+				<div id="scroll_helper_6" class="scroll_helper"></div>
+			</div>
+			
+		<!-- Triangles flou qui appraissent à la billeterie -->
+			<div id="triangles_flou_L" class="triangles_flou position" data-210p="left: 50%; opacity: 0; top: 35%;" data-300p="left: -50%; opacity: 1;" data-350p="" data-400p="left: -52%;" data-450p="" data-500p="left: -70%;" data-550p="" data-600p="left: 5%;" data-650p=""></div>
+			<div id="triangles_flou_R" class="triangles_flou position" data-210p="right: 50%; opacity: 0;" data-300p="right: -50%; opacity: 1;" data-350p="" data-400p="right: -52%;" data-450p="" data-500p="right: -70%;" data-550p="" data-600p="right: 5%;" data-650p=""></div>
+		
+		<!-- Triangles nets qui appraissent à la billeterie -->
+			<div id="triangles_nets_L" class="triangles_nets position" data-200p="left: 50%; opacity: 0;" data-300p="left: -57%; opacity: 1;" data-350p="" data-400p="left: -70%;" data-450p="" data-500p="left: -80%;" data-550p="" data-600p="left: -10%;" data-650p=""></div>
+			<div id="triangles_nets_R" class="triangles_nets position" data-200p="right: 50%; opacity: 0;" data-300p="right: -57%; opacity: 1;" data-350p="" data-400p="right: -70%;" data-450p="" data-500p="right: -80%;" data-550p="" data-600p="right: -10%;" data-650p=""></div>
+		
+		<!-- Le slide conteneur -->
+			<div id="slides-container">
+			
+			<!-- Le déplacement des slides -->
+				<div id="slides" data-0="transform:translate(0%,0%);" data-200p="transform:translate(0%,-22.2%);" data-250p="" data-300p="transform:translate(0%,-40.5%);" data-350p="" data-400p="transform:translate(0%,-60.25%);" data-450p="" data-500p="transform:translate(0%,-79.65%);" data-550p="" data-600p="transform:translate(0%,-95%);">
+				
+				<!-- Les slides -->
+					<div id="slide-1" class="slide"></div>
+					<div id="slide-2" class="slide">
+					<!-- Div noir où est affiché le programme du festival -->
+						<div id="programme" data-90p="opacity: 0; width: 30%; left: 35%;" data-200p="opacity: 1; width: 60%; left: 19.888888%;" data-215p="" data-250p="opacity: 0;">
+							<div id="jour-1" class="jours">
+								<div class="date_jour">
+									<p class="mot_jour">Friday</p>
+									<p class="numero_jour">2</p>
+									<p class="mot_jour">September</p>
+								</div>
+								<a id="tete_affiche_j1" class="tete_affiche" href='html/jolly_rogers.html'>
+									<p>Jolly Rogers</p>
+								</a>
+								<a id="groupe_1_j1" class="groupe" href='html/clairon_s_fire.html'>
+									<p>Clairon's Fire</p>
+								</a>
+								<a id="groupe_2_j1" class="groupe" href='html/los_banjitos.html'>
+									<p>Los Banjitos</p>
+								</a>
+							</div>
+							
+							<div id="jour-2" class="jours">
+								<div class="date_jour">
+									<p class="mot_jour">Saturday</p>
+									<p class="numero_jour">3</p>
+									<p class="mot_jour">September</p>
+								</div>
+								<a id="tete_affiche_j2" class="tete_affiche" href='html/only_u.html'>
+									<p>OnlyU</p>
+								</a>
+								<a id="groupe_1_j2" class="groupe" href='html/duodoizo.html'>
+									<p>DuoDoiZo</p>
+								</a>
+								<a id="groupe_2_j2" class="groupe" href='html/ilsonpapu.html'>
+									<p>Ilsonpapu</p>
+								</a>
+							</div>
+							
+							<div id="jour-3" class="jours">
+								<div class="date_jour">
+									<p class="mot_jour">Sunday</p>
+									<p class="numero_jour">4</p>
+									<p class="mot_jour">September</p>
+								</div>
+								<a id="tete_affiche_j3" class="tete_affiche" href='html/petit_biscuit.html'>
+									<p>Petit Biscuit</p>
+								</a>
+								<a id="groupe_1_j3" class="groupe" href='html/cloud.html'>
+									<p>Cloud</p>
+								</a>
+								<a id="groupe_2_j3" class="groupe" href='html/doubt.html'>
+									<p>Doubt</p>
+								</a>
+							</div>
+							
+						</div>
+					</div>
+					<div id="slide-3" class="slide">
+					<!-- Div noir où sera affiché la billeterie du festival -->
+						<div id="billeterie" data-290p="opacity: 0; width: 30%; left: 35%;" data-300p="opacity: 1; width: 65%; left: 17.4%;" data-315p="" data-350p="opacity: 0;">
+							
+							<div id="offres">
+								<div class="offres_billets">
+									<p class="type_offre">Weak Fox<p>
+									<p class="description_offre"> 1 day pass to the choices to select from when shopping.</p>
+									<p class="prix_offre">- Price : 30€</p>
+								</div>
+								<div class="separations_offres"></div>
+								<div class="offres_billets">
+									<p class="type_offre">Just Fox<p>
+									<p class="description_offre"> Pass 2 consecutive days at choice to select when buying.</p>
+									<p class="prix_offre">- Price : 50€</p>
+								</div>
+								<div class="separations_offres"></div>
+								<div class="offres_billets">
+									<p class="type_offre">Foxy Fox<p>
+									<p class="description_offre"> 3-day pass: the whole festival is yours.</p>
+									<p class="prix_offre">- Price : 75€</p>
+								</div>
+							</div>
+							
+							<div id="camping">
+								<p id="camping_titre">Camping supplement : </p>
+								<p id="prix_camping">6€ per night</p>
+							</div>
+							
+							<div id="points_vente">
+								<p id="points_vente_titre"> Point of sale : </p>
+								<a id="fnac" href='http://www.fnac.com/'> Fnac </a>
+								<a id="tickemaster" href='http://www.ticketmaster.fr/'> Ticketmaster </a>
+								<a id="digitick" href='http://www.digitick.com/'> Digitick </a>
+							</div>
+						</div>
+					</div>
+					<div id="slide-4" class="slide">
+					<!-- Div noir où sera affiché les infos pratiques du festival -->
+						<div id="infos_pratiques" data-390p="opacity: 0; width: 30%; left: 35%;" data-400p="opacity: 1; width: 60%; left: 19.888888%;" data-415p="" data-450p="opacity: 0;">
+						
+							<p id="titre_partie_list">Informations</p>
+							
+							<div id="flex_partie_list">
+								<div class="partie_list" data-titre="+ Places"></div>
+								<div class="partie_list" data-titre="+ Access"></div>
+								<div class="partie_list" data-titre="+ The Camping"></div>
+								<div class="partie_list" data-titre="+ Money"></div>
+								<div class="partie_list" data-titre="+ Food and drinks"></div>
+								<div class="partie_list" data-titre="+ Waste and environment"></div>
+								<div class="partie_list" data-titre="+ Voluntary work"></div>
+								<div class="partie_list" data-titre="+ Our Law"></div>
+							</div>
+							<div id="contenu"></div>
+						</div>
+					</div>
+					<div id="slide-5" class="slide">
+					<!-- Div noir où sera affiché les infos pratiques du festival -->
+						<div id="contact" data-490p="opacity: 0; width: 30%; left: 35%;"
+						data-500p="opacity: 1; width: 60%; left: 19.888888%;"
+						data-515p=""
+						data-550p="opacity: 0;">
+						
+							<p id="titre_contact">Contact</p>
+							
+							<form method="post" action="../php/formulaire_contact.php">
+								<div id="pseudo_formulaire" class="zone_formulaire">
+									<p>Name :</p>
+									<input type="text" name="pseudo"/>
+								</div>
+								<div id="email_formulaire" class="zone_formulaire">
+									<p>E-mail :</p>
+									<input type="text" name="mail"/>
+								</div>
+								<div id="sujet_formulaire" class="zone_formulaire">								
+									<p>Topic :</p>
+									<input type="text" name="sujet"/>
+								</div>
+								<div id="textarea_formulaire">
+									<p>Your message :</p>
+									<textarea name="message" rows="10">Enter your message</textarea>
+								</div>
+								<div class="bouton_formulaire">
+									<div id="bouton_formulaire_annuler">
+										<input name="annuler" type="reset" value="Reset">
+									</div>
+									<div id="bouton_formulaire_envoie">
+										<input type="button" value="Send" onClick="verif(this.form)" />
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div id="slide-6" class="slide">
+					<!-- Div noir où sera affiché les infos pratiques du festival -->
+						<div id="sponsors" data-590p="opacity: 0; width: 30%; left: 35%;"
+						data-600p="opacity: 1; width: 60%; left: 19.888888%;">
+						
+							<p id="titre_sponsors">Sponsors</p>
+							
+							<div id="sponsors_contenu">
+								<div class="sponsors_image_div">
+									<img id="sponsors_acal" class="sponsors_image" src="../images/sponsors/logo_acal.jpg" alt="Logo du sponsor ACAL">
+								</div>
+								<div class="sponsors_image_div">
+									<img class="sponsors_image" src="../images/sponsors/logo_blablacar.png" alt="Logo du sponsor BlaBlaCar">
+								</div>
+								<div class="sponsors_image_div">
+									<img id="sponsors_creditagricole" class="sponsors_image" src="../images/sponsors/logo_creditagricole.jpg" alt="Logo du sponsor Crédit Agricole">
+								</div>
+								<div class="sponsors_image_div">
+									<img class="sponsors_image" src="../images/sponsors/logo_directfm.png" alt="Logo du sponsor Direct FM">
+								</div>
+								<div class="sponsors_image_div">
+									<img class="sponsors_image" src="../images/sponsors/logo_fajet.png" alt="Logo du sponsor FatJet">
+								</div>
+								<div class="sponsors_image_div">
+									<img class="sponsors_image" src="../images/sponsors/logo_fnac.png" alt="Logo du sponsor Fnac">
+								</div>
+								<div class="sponsors_image_div">
+									<img class="sponsors_image" src="../images/sponsors/logo_orange.gif" alt="Logo du sponsor Orange">
+								</div>
+								<div class="clear_float"></div>
+							</div>
+						</div>
+						
+						
+						<footer>
+							<div id="copyright" data-590p="opacity: 0; width: 30%; left: 35%;"
+							data-600p="opacity: 1; width: 60%; left: 19.888888%;">
+								<a href='html/copyright.html'>Copyright</a>
+							</div>
+						</footer>
+					</div>
+				</div>
+			</div>
+			
+		<!-- Trait de séparation avec la barre de menu : couleur bordeaux -->
+			<div id="trait_menu" class="position" data-50p="width: 0%; left: 50%;" data-120p="width: 100%; left: 0%;"></div>
+					
+		<!-- Les 2 côtés de la tête de renard -->
+			<div id="fox_L" class="fox position" data-60p="top: 40%; right: 50%; opacity: 1;" data-90p="top: 5%; right: 50%;" data-120p="top: 5%; right: 80%;" data-250p="" data-300p="top: 5%; right: 88%;" data-350p="" data-400p="top: 5%; right: 100%;" data-450p=""></div>
+			<div id="fox_R" class="fox position" data-60p="top: 40%; left: 50%; opacity: 1;" data-90p="top: 5%; left: 50%;" data-120p="top: 5%; left: 80%;" data-250p="" data-300p="top: 5%; left: 88%;" data-350p="" data-400p="top: 5%; left: 100%;" data-450p=""></div>
+			
+		<!-- Les 3 barreaux géometriques -->
+			<div id="barre_div" class="position" data-0="top: 0;" data-6p="top: -11%;" data-12p="top: -21%;" data-25p="top: -42.5%;" data-50p="top: -85%;">
+				<div id="barre_L" class="barre"></div>
+				<div id="barre_M" class="barre"></div>
+				<div id="barre_R" class="barre"></div>
+			</div>
+			
+		<!-- L'effet lumineux à l'arrière du menu -->
+			<div class="fond_bouton position" data-30p="top: 8%;" data-45p="top: -15%;"></div>
+			<div class="fond_bouton position" data-30p="top: 8%;" data-45p="top: -15%;"></div>
+					
+		<!-- Boutons des langues -->
+			<div id="langues_div" class="position" data-0="right: 9%;" data-50p="right: 13%;">
+				<a id="v_fr" class="langues" href='../index.html' data-0="background-size: 45% auto; right: -50%;" data-25p="background-size: 35% auto; right: -25%;" data-50p="background-size: 45% auto; right: 0%;"></a>
+				<a id="v_en" class="langues" href='#scroll_helper_1' data-0="background-size: 45% auto; top: 50%;" data-25p="background-size: 35% auto; top: 25%;" data-50p="background-size: 45% auto; top: 0;"></a>
+			</div>
+					
+		<!-- Liens vers les réseaux sociaux -->
+			<div id="reseaux_sociaux_div" class="position">
+				<a class="facebook reseaux_sociaux" target="_blank" href="https://www.facebook.com/foxonbail/?fref=ts" data-0="background-size: 50% auto; right: -50%;" data-25p="background-size: 40% auto; right: -25%;" data-50p="background-size: auto 40%; right: 0%;"></a>
+				<a class="twitter reseaux_sociaux" target="_blank" href="http://www.twitter.com/" data-0="background-size: 50% auto; top: 50%; right: -50%;" data-25p="background-size: 40% auto; top: 25%; right: -50%;" data-50p="background-size: auto 40%; top: 0%; right: -50%;"></a>
+			</div>
+			
+		
+		<!-- Titre "Fox On Bail" -->
+			<a id="titre_fox" class="titre_fox_on_bail position" href="#scroll_helper_1" data-0="top: 0; left: 5%; font-size: 4.5em;" data-50p="top: 2%; left: 2%; font-size: 3em;">Fox</a>
+			<a id="titre_on" class="titre_fox_on_bail position" href="#scroll_helper_1" data-0="top: 9%; left: 7.3%; font-size: 4.5em;" data-50p="top: 2%; left: 8%; font-size: 3em;">On</a>
+			<a id="titre_bail" class="titre_fox_on_bail position" href="#scroll_helper_1" data-0="top: 18%; left: 7.5%; font-size: 4.5em;" data-50p="top: 2%; left: 13%; font-size: 3em;">Bail</a>
+					
+		<!-- Menu de navigation -->
+			<nav id="menu">
+				<a id="prog" class="position" href="#scroll_helper_2" data-30p="top: 26%;" data-45p="top: 3%;">Programmation</a>
+				<a id="billet" class="position" href="#scroll_helper_3" data-30p="top: 26%;" data-45p="top: 3%;">Tickets</a>
+				<a id="infos" class="position" href="#scroll_helper_4" data-30p="top: 26%;" data-45p="top: 3%;">Informations</a>
+			</nav>
+			
+		<!-- Bouton Contact -->
+			<div id="boutons_bas_droit" class="position flex_container">
+				<a class="boutons_contact_sponsors flex_1" href="#scroll_helper_5">Contact</a>
+				<a class="boutons_contact_sponsors flex_1" href="#scroll_helper_6">Sponsors</a>
+			</div>
+			
+			<div id="menu_mobile"  class="flex_container">
+				<a id="titre_fox_on_bail_mobile" class="after_click larg100p flex_1" href="#scroll_helper_1">Fox On Bail</a>
+				
+				<a class="prog_billet_infos_menu_mobile after_click larg100p flex_1" href="#scroll_helper_2">Programmation</a>
+				<a class="prog_billet_infos_menu_mobile after_click larg100p flex_1" href="#scroll_helper_3">Tickets</a>
+				<a class="prog_billet_infos_menu_mobile after_click larg100p flex_1" href="#scroll_helper_4">Informations</a>
+				
+				<a id="contact_mobile" class="boutons_contact_sponsors after_click larg100p flex_1" href="#scroll_helper_5">Contact</a>
+				<a id="sponsor_mobile" class="boutons_contact_sponsors after_click larg100p flex_1" href="#scroll_helper_6">Sponsors</a>
+				<a id="facebook_mobile" class="reseaux_sociaux_mobile after_click larg100p flex_1" target="_blank" href="https://www.facebook.com/foxonbail/?fref=ts">Facebook</a>
+				<a id="twitter_mobile" class="reseaux_sociaux_mobile after_click larg100p flex_1" target="_blank" href="http://www.twitter.com/">Twitter</a>
+				<a class="langues_mobile after_click larg100p flex_1" href="../index.html">Français</a>
+			</div>
+			
+			<div id="affiche_menu_mobile"> <p><</p> </div>
+		</div>
+	</body>
+</html>

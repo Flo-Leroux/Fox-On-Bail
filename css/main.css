@@ -1,0 +1,901 @@
+@font-face {
+    font-family: 'Kredit';
+    src: url('../font/kredit.ttf');
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.position {
+	position: fixed;
+}
+
+#slides-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#slides {
+	width: 100%;
+	height: 600%;
+	position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 19.6%;
+}
+
+#slide-1 {
+	/* border: 2px solid blue; */
+}
+
+#slide-2 {
+	/* border: 2px solid green; */
+	-webkit-transform: translate(0,100%);
+	        -ms-transform: translate(0,100%);
+	    transform: translate(0,100%);
+}
+
+#slide-3 {
+	/* border: 2px solid yellow; */
+	-webkit-transform: translate(0,200%);
+	        -ms-transform: translate(0,200%);
+	    transform: translate(0,200%);
+}
+
+#slide-4 {
+	/* border: 2px solid red; */
+	-webkit-transform: translate(0,300%);
+	        -ms-transform: translate(0,300%);
+	    transform: translate(0,300%);
+}
+
+#slide-5 {
+	/* border: 2px solid orange; */
+	-webkit-transform: translate(0,400%);
+	        -ms-transform: translate(0,400%);
+	    transform: translate(0,400%);
+}
+
+#slide-6 {
+	/* border: 2px solid pink; */
+	-webkit-transform: translate(0,500%);
+	        -ms-transform: translate(0,500%);
+	    transform: translate(0,500%);
+}
+
+#helper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 600%;
+}
+
+.scroll_helper {
+	width: 100%;
+	height: 17%;
+}
+
+#scroll_helper_1 {
+	/* background-color: blue; */
+	width: 100%;
+	height: 34%;
+}
+
+#scroll_helper_2 {
+	/* background-color: green; */
+}
+
+#scroll_helper_3 {
+	/* background-color: yellow; */
+}
+
+#scroll_helper_4 {
+	/* background-color: red; */
+}
+
+#scroll_helper_5 {
+	/* background-color: orange; */
+}
+
+#scroll_helper_6 {
+	/* background-color: pink; */
+}
+
+#background {
+	background-image:  url('../images/background/fond.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	opacity: 0.19;
+	filter: alpha(opacity=19);
+	width: 100%;
+	height: 100%;
+}
+
+#barre_div {
+	width: 100%;
+	height: 100%;
+}
+
+#barre_L {
+	left: 26.3333333%;
+}
+
+#barre_M {
+	left: 46.55555555%;
+}
+
+#barre_R {
+	right: 25.3333333%;
+}
+
+.barre {
+	background-image:  url('../images/background/barre.png');
+	background-repeat: repeat-y;
+	top: 0;
+	width: 8%;
+	height: 100%;
+	position: absolute;
+}
+
+#fox_R {
+	left: 50%;
+}
+
+#fox_L {
+	right: 50%;
+	-webkit-transform: scaleX(-1);
+	        -ms-transform: scaleX(-1);
+	    transform: scaleX(-1);
+}
+
+.fox {
+	background-image:  url('../images/background/fox.png');
+	background-repeat: no-repeat;
+	background-size: 28% auto;
+	top: 40%;
+	width: 100%;
+	height: 100%;
+}
+
+nav a{
+	color: #8c1c01;
+	font-family:  "Agency FB", "Courrier New";
+	font-size: 2.6em;
+	top: 26%;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-decoration: underline overline darkgrey;
+}
+
+#prog {
+	left: 22.5%;
+}
+
+#billet {
+	left: 45.5%;
+}
+
+#infos {
+	right: 22%;
+}
+
+.fond_bouton {
+	background-image:  url('../images/bouton/bouton_fond_effet.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	top: 8%;
+	width: 100%;
+	height: 50%;
+}
+
+#trait_menu {
+	width: 100%;
+	height: 4px;
+	background-color: #8c1c01;
+	top: 15%;
+}
+
+.titre_fox_on_bail {
+	font-family: Kredit;
+	margin: 0;
+	color: #e97c1b;
+	font-size: 4.5em;
+	text-decoration: none;
+}
+
+#titre_fox {
+	top: 0;
+	left: 4.8888888%;
+		
+}
+
+#titre_on {
+	top: 9%;
+	left: 7.3%;
+}
+
+#titre_bail {
+	top: 18%;
+	left: 7.5%;
+}
+
+#reseaux_sociaux_div {
+	/*border: 2px solid pink;*/
+	width: 10%;
+	height: 20%;
+	top: 4%;
+	right: 3%;
+}
+
+.reseaux_sociaux {
+	background-repeat: no-repeat;
+	background-size: 50% auto;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+ }
+ 
+.facebook {
+	background-image: url('../images/reseaux_sociaux/logo_facebook.png');
+}
+
+#reseaux_sociaux_div .facebook {
+	right: -50%;
+}
+
+.twitter {
+	background-image: url('../images/reseaux_sociaux/logo_twitter.png');
+}
+
+#reseaux_sociaux_div .twitter {
+	top: 50%;
+	right: -50%;
+}
+
+#langues_div {
+	/*border: 2px solid red;*/
+	width: 7%;
+	height: 15%;
+	top: 6%;
+	right: 9%;
+}
+
+.langues {
+	background-repeat: no-repeat;
+	background-size: 45% auto;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+#v_fr {
+	background-image: url('../images/langues/v_fr.png');
+	top: 0;
+	right: -50%;
+}
+
+#v_en {
+	background-image: url('../images/langues/v_en.png');
+	top: 50%;
+	right: -50%;
+}
+
+#triangles_nets_R {
+	right: -55%;
+}
+
+#triangles_nets_L {
+	left: -55%;
+	-webkit-transform: scaleX(-1);
+	        -ms-transform: scaleX(-1);
+	    transform: scaleX(-1);
+}
+
+.triangles_nets {
+	background-image: url('../images/triangles/triangles_nets.png');
+	background-repeat: no-repeat;
+	background-size: 30% auto;
+	width: 100%;
+	height: 100%;
+	top: 17%;
+}
+
+#triangles_flou_R {
+	right: -53%;
+}
+
+#triangles_flou_L {
+	left: -53%;
+	-webkit-transform: scaleX(-1);
+	        -ms-transform: scaleX(-1);
+	    transform: scaleX(-1);
+}
+
+.triangles_flou {
+	background-image: url('../images/triangles/triangles_flou.png');
+	background-repeat: no-repeat;
+	background-size: 28% auto;
+	width: 100%;
+	height: 100%;
+	top: 35%;
+}
+
+#programme {
+	width: 60%;
+	height: 70%;
+	background-color: RGBa(255,255,255,0.4);
+	position: absolute;
+	left: 19.888888888%;
+	bottom: 2%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	text-align: center;
+}
+
+#programme a {
+	text-decoration: none;
+}
+
+.jours {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	text-align: center;
+	max-width: 30%;
+}
+
+.date_jour {
+	text-align: center;
+	background-color: RGBa(0,0,0,0.2);
+	-webkit-box-flex: 2;
+	-webkit-flex: 2;
+	    -ms-flex: 2;
+	        flex: 2;
+	padding: 0;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+}
+
+.date_jour p {
+	padding: 0;
+	font-family: Kredit;
+	color: #e97c1b;
+	display: inline;
+}
+
+.mot_jour {
+	font-size: 1.2em;
+}
+
+.numero_jour {
+	font-size: 3.5em;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+.tete_affiche {
+	-webkit-box-flex: 5;
+	-webkit-flex: 5;
+	    -ms-flex: 5;
+	        flex: 5;
+	text-align: center;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+	background-size: auto 100%;
+    background-repeat: no-repeat;
+	-webkit-filter: grayscale(1);
+	        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /></filter></svg>#filter');
+	        -webkit-filter: grayscale(1);
+	                filter: grayscale(1);
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.tete_affiche p {
+	font-family: Kredit;
+	color: white;
+	padding: 0;
+	margin-top: 50%;
+	font-size: 2em;
+}
+
+.groupe p {
+	font-family: Kredit;
+	color: white;
+	padding: 0;
+	font-size: 1.5em; 
+	margin-top: 25%;
+}
+
+.groupe {
+	-webkit-box-flex: 3;
+	-webkit-flex: 3;
+	    -ms-flex: 3;
+	        flex: 3;
+	text-align: center;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	-webkit-filter: grayscale(1);
+	        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /></filter></svg>#filter');
+	        -webkit-filter: grayscale(1);
+	                filter: grayscale(1);
+	background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.tete_affiche:hover, .groupe:hover{
+	-webkit-filter: grayscale(0);
+	        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter></svg>#filter');
+	        -webkit-filter: grayscale(0);
+	                filter: grayscale(0);
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+#tete_affiche_j1 {
+	background-image:  url('../images/groupes/jolly_rogers.jpg');
+}
+
+#groupe_1_j1 {
+	background-image:  url('../images/groupes/clairon_s_fire.jpg');
+}
+
+#groupe_2_j1 {
+	background-image:  url('../images/groupes/los_banjitos.jpg');
+}
+
+#tete_affiche_j2 {
+	background-image:  url('../images/groupes/only_u.jpg');
+}
+
+#groupe_1_j2 {
+	background-image:  url('../images/groupes/duodoizo.jpg');
+}
+
+#groupe_2_j2 {
+	background-image:  url('../images/groupes/ilsonpapu.jpg');
+}
+
+#tete_affiche_j3 {
+	background-image:  url('../images/groupes/petit_biscuit.jpg');
+}
+
+#groupe_1_j3 {
+	background-image:  url('../images/groupes/cloud.jpg');
+}
+
+#groupe_2_j3{
+	background-image:  url('../images/groupes/doubt.jpg');
+}
+
+#billeterie {
+	width: 65%;
+	height: 65%;
+	background-color: RGBa(0,0,0,0.5);
+	position: absolute;
+	left: 17.4%;
+	bottom: 11%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+#offres {
+	-webkit-box-flex: 4;
+	-webkit-flex: 4;
+	    -ms-flex: 4;
+	        flex: 4;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.offres_billets {
+	-webkit-box-flex: 60;
+	-webkit-flex: 60;
+	    -ms-flex: 60;
+	        flex: 60;
+	text-align: center;
+	padding: 1%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+.separations_offres {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	background-color: white;
+}
+
+.type_offre {
+	font-family: Kredit;
+	font-size: 3em;
+	color: #eebb3a;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	margin: 0;
+	padding: 0;
+}
+
+.description_offre, .prix_offre {
+	font-family: "Agency FB", "Courrier New";
+	font-size: 1.8em;
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+
+.description_offre {
+	-webkit-box-flex: 2;
+	-webkit-flex: 2;
+	    -ms-flex: 2;
+	        flex: 2;
+}
+
+.prix_offre {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+#camping {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	margin: 0;
+}
+
+#camping_titre, #points_vente_titre {
+	font-family: Kredit;
+	font-size: 2.2em;
+	color: #eebb3a;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	margin-left: 2%;
+	padding-top: 1%;
+}
+
+#prix_camping, #fnac, #tickemaster, #digitick {
+	font-family: "Agency FB", "Courrier New";
+	font-size: 1.8em;
+	color: white;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	margin-left: 5%;
+}
+
+#points_vente {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+#infos_pratiques {
+	width: 60%;
+	height: 60%;
+	background-color: RGBa(0,0,0,0.5);
+	position: absolute;
+	left: 17.4%;
+	bottom: 14%;
+}
+
+#contenu {
+	font-family: "Agency FB", "Courrier New";
+	font-size: 1.2em;
+	color: white;
+	width: 90%;
+	text-align: justify;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#flex_partie_list {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	width: 95%;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	padding: 1%;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+}
+
+#titre_partie_list {
+	font-family: Kredit;
+	font-size: 2.2em;
+	color: white;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.titre_partie_list {
+	font-family: Kredit;
+	font-size: 1.8em;
+	color: white;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+.titre_partie_list:hover {
+	cursor: pointer;
+}
+
+.titre_partie_list p {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+#contact {
+	width: 60%;
+	height: 60%;
+	margin: auto;
+	position: absolute;
+	left: 20%;
+	bottom: 15%;
+	background-color: RGBa(0,0,0,0.5);
+	text-align: center;
+}
+
+#titre_contact {
+	font-family: Kredit;
+	font-size: 2.2em;
+	color: white;
+	text-align: center;
+	margin: 0;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	padding: 0;
+}
+
+#contact form  {
+	width: 90%;
+	height: auto;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1.5%;
+	font-family: "Agency FB", "Courrier New";
+	font-size: 1.3em;
+	color: white;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+}
+
+.zone_formulaire {
+	display: flex;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 0;
+}
+
+#textarea_formulaire {
+	display: flex;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 5%;
+}
+
+#contact form input {
+	flex: 3;
+	color: white;
+	text-align: center;
+	height: 50%;
+	border-radius: 5px;
+	border: 1px solid white;
+	background-color: RGBa(255,255,255,0.3);
+}
+
+#contact form textarea {
+	flex: 3;
+	color: white;
+	text-align: center;
+	height: 50%;
+	border-radius: 5px;
+	border: 1px solid white;
+	background-color: RGBa(255,255,255,0.3);
+}
+
+#contact form p {
+	flex: 1;
+	margin: auto;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	transform: translateY(-30%);
+}
+
+#bouton_formulaire_annuler, #bouton_formulaire_envoie {
+	display: inline-block;
+	width: 40%;
+}
+
+#bouton_formulaire_annuler input, #bouton_formulaire_envoie input {
+	font-family: "Agency FB", "Courrier New";
+	font-size: 0.8em;
+	color: white;
+	width: 50%;
+	border-radius: 10px;
+	border: 1px solid white;
+	background-color: RGBa(255,255,255,0.4);
+}
+
+#bouton_formulaire_annuler input:hover, #bouton_formulaire_envoie input:hover {
+	width: 51%;
+	background-color: RGBa(255,255,255,0.8);
+	cursor: pointer;
+}
+
+#sponsors {
+	width: 60%;
+	height: 60%;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: RGBa(0,0,0,0.3);
+	text-align: center;
+}
+
+#titre_sponsors {
+	font-family: Kredit;
+	font-size: 2.2em;
+	color: white;
+	text-align: center;
+}
+
+.sponsors_image_div {
+	width: 22%;
+	height: 30%;
+	margin-left: 1%;
+	margin-right: 1.5%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	float: left;
+	overflow: hidden;
+	line-height: 0%;
+	text-align: center;
+	background-color: white;
+}
+
+.sponsors_image {
+	max-width: 100%;
+	max-height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#sponsors_acal {
+	margin-top: 50%;
+	transform: translateY(-70%);
+}
+
+#sponsors_creditagricole {
+	margin-top: 50%;
+	transform: translateY(-62.5%);
+}
+
+#sponsors_contenu {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+#copyright {
+	width: 60%;
+	height: auto;
+	margin: auto;
+	position: absolute;
+	top: 66%;
+	left: 0;
+	background-color: RGBa(0,0,0,0.1);
+	text-align: center;
+}
+
+#copyright a {
+	color: #e97c1b;
+	font-family: "Agency FB", "Times New Roman";
+	font-size: 1.2rem;
+	text-decoration: none;
+}
+
+#boutons_bas_droit {
+	width: 12%;
+	height: auto;
+	text-align: center;
+	right: 1%;
+	bottom: 1%;
+}
+
+.boutons_contact_sponsors {
+	color: #e97c1b;
+	font-family: "Agency FB", "Times New Roman";
+	text-decoration: none;
+}
+
+#boutons_bas_droit .boutons_contact_sponsors {
+	font-size: 1.3em;
+}
+
+.flex_container {
+	display: flex;
+}
+
+.flex_1 {
+	flex: 1;
+}
